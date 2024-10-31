@@ -25,3 +25,7 @@ In the initial approach, the CNN model was trained on individual MRI slices to c
 2. **Slice Count Threshold**: A threshold was established for the minimum number of abnormal slices within each patient’s scan required to classify the entire patient as abnormal.
 
 Thus, while the model was trained on individual slices, a patient was labeled as abnormal if the number of slices labeled abnormal met or exceeded the slice count threshold.
+
+## Second Approach: Histogram and MLP Classification
+
+In a second approach, 16 slices were selected from the beginning of the available slices for each patient. These slices were then divided into left and right hemispheres, allowing for the computation of two histograms for each slice—one for the right and one for the left. This resulted in a feature set of size \(2 \times 16 \times 255\). A multi-layer perceptron (MLP) was used to classify these features based on the idea that abnormalities can affect the symmetry of brain structures, which is indicative of various diseases.

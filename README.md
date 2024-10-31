@@ -15,15 +15,13 @@ The following preprocessing steps were applied to the MRI data to prepare it for
 7. **Resize Images**: Resize images to a consistent resolution for model input.
 8. **Save as NumPy Arrays**: Convert and save processed images as NumPy arrays for efficient loading during training.
 
-## CNN Model Architecture
+## CNN Model 
 
 The CNN model for this project includes three convolutional blocks, each with convolutional and max-pooling layers, followed by fully connected layers. This structure enables the model to learn spatial features from MRI slices and classify each as normal or abnormal. The final layer outputs a probability score to support binary classification.
 
-## Classification Approach
-
-In the initial approach, a convolutional neural network (CNN) model was trained on individual MRI slices to classify them as either normal or abnormal. After training the CNN, two thresholds were determined:
+In the initial approach, the CNN model was trained on individual MRI slices to classify them as either normal or abnormal. After training, two thresholds were determined:
 
 1. **CNN Prediction Threshold**: A threshold was set for the CNN model’s prediction confidence to label a slice as abnormal.
-2. **Slice Count Threshold**: A threshold was set for the minimum number of abnormal slices within each patient’s scan required to classify the entire patient as abnormal.
+2. **Slice Count Threshold**: A threshold was established for the minimum number of abnormal slices within each patient’s scan required to classify the entire patient as abnormal.
 
-In other words, while the model was trained on individual slices, a patient was labeled as abnormal if the number of slices labeled abnormal met or exceeded the slice count threshold.
+Thus, while the model was trained on individual slices, a patient was labeled as abnormal if the number of slices labeled abnormal met or exceeded the slice count threshold.

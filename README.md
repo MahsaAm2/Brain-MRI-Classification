@@ -52,3 +52,11 @@ For the fourth approach, a pre-trained ResNet50 model was utilized with transfer
 
 The final activation function used in each model is a sigmoid function, suitable for binary classification tasks.
 
+### Evaluation Metrics
+
+For this challenge, the model's performance was assessed using three key evaluation metrics:
+
+- **Precision**: Measures the accuracy of the positive predictions.
+- **Recall**: Evaluates the model's ability to correctly identify positive cases.
+- **AUC (Area Under the Curve)**: Represents the model's ability to distinguish between classes.
+

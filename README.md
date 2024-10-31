@@ -28,7 +28,13 @@ Thus, while the model was trained on individual slices, a patient was labeled as
 
 ## Second Approach: Histogram and MLP Classification
 
-In a second approach, 16 slices were selected from the beginning of the available slices for each patient. These slices were then divided into left and right hemispheres, allowing for the computation of two histograms for each slice—one for the right and one for the left. This resulted in a feature set of size \(2 \times 16 \times 255\). A multi-layer perceptron (MLP) was used to classify these features based on the idea that abnormalities can affect the symmetry of brain structures, which is indicative of various diseases.
+In a second approach, 16 slices were selected from the beginning of the available slices for each patient. These slices were then divided into left and right hemispheres, allowing for the computation of two histograms for each slice—one for the right and one for the left. This resulted in a feature set with a size of \(2 \times 16 \times 255\), where:
+- **2** represents the left and right hemispheres,
+- **16** is the number of selected slices,
+- **255** corresponds to the number of intensity levels for the histogram.
+
+A multi-layer perceptron (MLP) was used to classify these features based on the idea that abnormalities can affect the symmetry of brain structures, which is indicative of various diseases.
+
 
 ## Third Approach: SVM with PCA
 

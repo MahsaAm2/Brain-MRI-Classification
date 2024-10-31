@@ -5,17 +5,12 @@ This project classifies brain MRI images into two categories: normal and abnorma
 ## Sample MRI Scans
 
 ### Normal MRI Examples
-![n1](https://github.com/user-attachments/assets/7eadc09d-891f-4a70-90d0-3a7c2a40b7a7)
-![n2](https://github.com/user-attachments/assets/60cd1cc9-fe92-4f4a-ac24-93fe5fc2f31c)
-![n3](https://github.com/user-attachments/assets/1dc284c1-841b-4a62-8d5f-63e700389fa7)
-
+| ![n1](https://github.com/user-attachments/assets/7eadc09d-891f-4a70-90d0-3a7c2a40b7a7) | ![n2](https://github.com/user-attachments/assets/60cd1cc9-fe92-4f4a-ac24-93fe5fc2f31c) | ![n3](https://github.com/user-attachments/assets/1dc284c1-841b-4a62-8d5f-63e700389fa7) |
+| --- | --- | --- |
 
 ### Abnormal MRI Examples
-![ab](https://github.com/user-attachments/assets/518dbee5-0704-4dd4-b485-3483cb820640)
-![ab2](https://github.com/user-attachments/assets/c3955755-a340-4b3e-8b51-3954112c593a)
-![abb](https://github.com/user-attachments/assets/c7513e13-9798-4e62-8e43-9a03e7167412)
-
-
+| ![ab](https://github.com/user-attachments/assets/518dbee5-0704-4dd4-b485-3483cb820640) | ![ab2](https://github.com/user-attachments/assets/c3955755-a340-4b3e-8b51-3954112c593a) | ![abb](https://github.com/user-attachments/assets/c7513e13-9798-4e62-8e43-9a03e7167412) |
+| --- | --- | --- |
 
 
 ## Preprocessing Steps

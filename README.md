@@ -21,7 +21,7 @@ The following preprocessing steps were applied to the MRI data to prepare it for
 
 In the first approach, a Convolutional Neural Network (CNN) was used for classification. After training the CNN, thresholds were established to determine abnormality based on the number of slices. If the number of slices for a patient met the threshold, the patient was labeled as abnormal.
 
-## Second Approach: Histogram and MLP Classification
+### Second Approach: Histogram and MLP Classification
 
 In a second approach, 16 slices were selected from the beginning of the available slices for each patient. These slices were then divided into left and right hemispheres, allowing for the computation of two histograms for each slice—one for the right and one for the left. This resulted in a feature set with a size of 
 2 x 16 x 255, where:

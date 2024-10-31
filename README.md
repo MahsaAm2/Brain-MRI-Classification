@@ -15,7 +15,7 @@ The following preprocessing steps were applied to the MRI data to prepare it for
 7. **Resize Images**: Resize images to a consistent resolution for model input.
 8. **Save as NumPy Arrays**: Convert and save processed images as NumPy arrays for efficient loading during training.
 
-## CNN Model 
+## CNN Model and Classification Approach
 
 The CNN model for this project includes three convolutional blocks, each with convolutional and max-pooling layers, followed by fully connected layers. This structure enables the model to learn spatial features from MRI slices and classify each as normal or abnormal. The final layer outputs a probability score to support binary classification.
 
@@ -29,3 +29,7 @@ Thus, while the model was trained on individual slices, a patient was labeled as
 ## Second Approach: Histogram and MLP Classification
 
 In a second approach, 16 slices were selected from the beginning of the available slices for each patient. These slices were then divided into left and right hemispheres, allowing for the computation of two histograms for each slice—one for the right and one for the left. This resulted in a feature set of size \(2 \times 16 \times 255\). A multi-layer perceptron (MLP) was used to classify these features based on the idea that abnormalities can affect the symmetry of brain structures, which is indicative of various diseases.
+
+## Third Approach: SVM with PCA
+
+In the third approach, 16 slices were selected from the beginning of each patient's available slices, resulting in a feature set of size \(16 \times 255\). Principal Component Analysis (PCA) was then applied to reduce the dimensionality of the feature set. The reduced features were fed into a Support Vector Machine (SVM) classifier, where various kernels and regularization parameters (C) were evaluated to find the optimal model for classifying the MRI slices as normal or abnormal.

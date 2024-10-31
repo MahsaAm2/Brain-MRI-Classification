@@ -15,6 +15,18 @@ The following preprocessing steps were applied to the MRI data to prepare it for
 7. **Resize Images**: Resize images to a consistent resolution for model input.
 8. **Save as NumPy Arrays**: Convert and save processed images as NumPy arrays for efficient loading during training.
 
+## Handling Imbalanced Dataset
+
+The dataset exhibited a significant class imbalance, with approximately 87% of the samples classified as normal. To address this issue, we implemented the following strategies:
+
+1. **Weighted Sampling**: We used a sampler that assigns weights to each class during training, allowing the model to place greater emphasis on the minority class (abnormal samples).
+
+2. **Loss Function Adjustment**: The weights from the sampler were incorporated into the loss function to ensure that misclassifications of the abnormal class carried more penalty, further enhancing the model's focus on learning from the minority class.
+
+3. **Data Augmentation**: We applied various data augmentation techniques to artificially expand the dataset, including transformations such as rotation, flipping, and scaling for abnormal samples. This helped improve model robustness.
+
+These methods were instrumental in enhancing the model's ability to generalize and effectively classify both normal and abnormal cases.
+
 ## Approaches
 
 ### First Approach: CNN Model
@@ -67,7 +79,4 @@ To generate predictions using the saved models, place `submission.py` in the sam
 
 ```bash
 python submission.py --data-dir /path/to/data-dir --predictions-file-path /path/to/submission.csv
-
-
-
 

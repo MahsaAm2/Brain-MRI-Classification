@@ -52,11 +52,20 @@ For the fourth approach, a pre-trained ResNet50 model was utilized with transfer
 
 The final activation function used in each model is a sigmoid function, suitable for binary classification tasks.
 
-### Evaluation Metrics
+
+## Evaluation Metrics
 
 For this challenge, the model's performance was assessed using three key evaluation metrics:
 
 - **Precision**: Measures the accuracy of the positive predictions.
 - **Recall**: Evaluates the model's ability to correctly identify positive cases.
 - **AUC (Area Under the Curve)**: Represents the model's ability to distinguish between classes.
+
+## Running the Models
+
+To generate predictions using the saved models, place `submission.py` in the same directory as the saved model files. Then, run the following command:
+
+```bash
+python submission.py --data-dir /path/to/data-dir --predictions-file-path /path/to/submission.csv
+
 

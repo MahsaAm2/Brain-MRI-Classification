@@ -1,6 +1,6 @@
 # Brain MRI Classification: Normal vs. Abnormal
 
-This project classifies brain MRI images into two categories: normal and abnormal. The dataset, sourced from the [iAAA MRI Challenge](https://github.com/iAAA-event/iAAA-MRI-Challenge), consists of 3,132 MRI scans from 1,044 patients, including T1-weighted (T1-W), T2-weighted (T2-W), and FLAIR images. Each patient has between 16 to 20 MRI slices, featuring various brain conditions such as tumors, Alzheimer's, and atrophy.
+This project classifies brain MRI images into two categories: normal and abnormal. The dataset, sourced from the [iAAA MRI Challenge](https://github.com/iAAA-event/iAAA-MRI-Challenge), consists of 3,132 MRI scans from 1,044 patients, including T1-weighted spin-echo (T1W_SE), T2-weighted turbo spin-echo (T2W_TSE), and T2-weighted FLAIR (T2W_FLAIR) images. Each patient has between 16 to 20 MRI slices, with conditions such as tumors, Alzheimer's, and atrophy represented in the dataset.
 
 ## Sample MRI Scans
 
